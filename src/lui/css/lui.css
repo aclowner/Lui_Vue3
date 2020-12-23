@@ -1,0 +1,621 @@
+@import url("root.css");
+@import url("reset.css");
+@import url("loading.css");
+@import url("//at.alicdn.com/t/font_2103132_tc8mhv1ydat.css");
+/* lui基本样式 */
+.icon{
+    font-size: var(--size);
+}
+/* flex */
+.flex{
+    display: flex;
+}
+.flex.column{
+    flex-direction: column;
+}
+.flex.center{
+    align-items: center;
+    justify-content: center;
+}
+.f1{
+    flex: 1;
+    overflow: hidden;
+}
+
+/* icon */
+.iconfont{
+    font-size: .16rem;
+}
+
+/* vue 过度动态 */
+.fade-enter{    
+    transform: translateY(.2rem);
+    opacity: 0.1;
+}
+.fade-enter-active{
+    transition:  all .7s;
+}
+.fade-leave-active{
+    opacity: 0.05;
+    transform: translateY(.2rem);
+    transition:  all .6s;
+}
+
+
+/* column 1-12 */
+.col1{width: 8.33%;}
+.col2{width: 16.66%;}
+.col3{width: 25%;}
+.col4{width: 33.33%;}
+.col5{width: 41.67%;}
+.col6{width: 50%;}
+.col7{width: 58.33%;}
+.col8{width: 66.67%;}
+.col9{width: 75%;}
+.col10{width: 83.33%;}
+.col11{width: 91.67%;}
+
+/* toe text-overflow-ellipsis  文字超出省略 */
+.toe{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* scroll ---- start */
+._scroll{position: relative;overflow: hidden;height: 100%;pointer-events: auto;}
+
+._scroll>._con{height: 100%;overflow: hidden;}
+
+._scroll>._bar{position: absolute;}
+
+._scroll>._bar._v{width: .08rem;height: 1rem;right: 1px;background: var(--scroll-bar);top: 0;border-radius: .04rem;}
+
+._scroll>._bar:hover{background: var(--scroll-bar-hover);width: .1rem;}
+._scroll>._bar.bar-press{background: var(--scroll-bar-press);width: .1rem;}
+.user-unsel{user-select:none;}
+
+.lui-select ._scroll ._bar {width: .05rem;}
+.lui-select ._scroll ._bar:hover, .lui-select ._scroll ._bar.bar-press{width: .07rem;}
+
+.lui-table ._scroll ._bar{width: .07rem;}
+.lui-table ._scroll ._bar:hover, .lui-table ._scroll ._bar.bar-press{width: .08rem;}
+
+/* scroll ---- end */
+
+
+/* a, button */
+button:active {
+    transform: translateY(2px);
+}
+.btn{
+    min-width: 1rem ;
+    padding: 1px .1rem;
+	letter-spacing: 1px;
+	color: var(--input-color);
+	position: relative;
+    font-size: .16rem;
+    line-height: 2;
+    border-radius: 3px;
+    cursor: pointer;
+    background: #efefef;    
+    border: none;
+    white-space: nowrap;
+    text-align: center;
+}
+.btn:hover{
+    /* box-shadow: 0 0 5px 2px rgba(0,0,0,0.12), 0 17px 50px 0 rgba(0,0,0,0.1); */
+    opacity: .8;
+}
+.btn[disabled]:hover{
+    box-shadow: none;
+}
+/* 不同背景色button */
+.btn.blue{
+    background: var(--blue);
+    color: #fff;
+}
+.btn.green{
+    background: var(--green);
+    color: #fff;
+}
+.btn.yellow{
+    background: var(--yellow);
+    color: #fff;
+}
+.btn.orange{
+    background: var(--orange);
+    color: #fff;
+}
+.btn[disabled]{
+    color: #aaa;
+    background: #dedede;
+}
+.btn[disabled]:hover{
+    cursor: not-allowed;
+}
+/* 边框button */
+.btn.btn-border{    
+    padding: 0 .09rem;
+    background: transparent;
+    border: var(--input-border);
+}
+.btn-border.blue{
+    border: solid 1px var(--blue);
+    color: var(--blue);
+}
+.btn-border.green{
+    border: solid 1px var(--green);
+    color: var(--green);
+}
+.btn-border.yellow{
+    border: solid 1px var(--yellow);
+    color: var(--yellow);
+}
+.btn-border.orange{
+    border: solid 1px var(--orange);
+    color: var(--orange);
+}
+.btn-border[disabled]{
+    border: solid 1px #dedede;
+}
+
+/* 大button */
+.btn.btn-lg{    
+    padding-left: .12rem;
+    padding-right: .12rem;
+    font-size: .16rem;
+    line-height: 2.5;    
+}
+/* 小button */
+.btn.btn-sm{    
+    padding-left: .08rem;
+    padding-right: .08rem;
+    min-width: .62rem;
+    font-size: .16rem;
+    line-height: 1.5;
+}
+/* 最小button */
+.btn.btn-mini{
+    padding: 2px .05rem;
+    font-size: .14rem;
+    line-height: 1;
+    min-width: unset;
+    border-radius: 2px;
+}
+.btn.btn-border.btn-mini{
+    padding: 1px .05rem;
+}
+.mr1{
+    margin-right: .1rem;
+}
+.mr2{
+    margin-right: .2rem;
+}
+
+.btn-icon{
+    background: transparent;
+    border: solid 1px #424254;
+    border-radius: 3px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+}
+.btn-icon .icon{
+    margin-right: 10px;
+}
+
+.btn>input{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: unset;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.a-btn{
+    padding: 0 8px;
+    margin: 0 4px;
+}
+.a-btn.orange{
+    color: var(--orange);
+}
+.a-btn.green{
+    color: var(--green);
+}
+.a-btn.blue{
+    color: var(--blue);
+}
+
+
+/* input */
+input, textarea{
+    border: var(--input-border);    
+    color: var(--input-color);
+    width: 100%;    
+    background: var(--input-bg);
+}
+input{
+    height: var(--input-height);
+}
+textarea{
+    height: 1rem;
+    line-height: 2;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+    color: var(--placeholder-color);
+}
+::-moz-placeholder { /* Firefox 19+ */  
+    color: var(--placeholder-color);
+}
+:-ms-input-placeholder { /* IE 10+ */ 
+    color: var(--placeholder-color);
+}
+:-moz-placeholder { /* Firefox 18- */ 
+    color: var(--placeholder-color);
+}
+input[readonly]{
+    background: var(--input-bg-readonly);
+}
+
+/* input-icon */
+.icon-pos-right input{
+    padding-right: .38rem;
+}
+.icon-pos-left input{
+    padding-left: .38rem;
+}
+
+/* 带标签输入框 */
+.lui-input-tag{
+    width: 100%;
+    height: var(--input-height);
+    display: flex;
+    border: var(--input-border);
+    border-radius: 3px;
+    align-items: stretch;    
+}
+.lui-input-tag>span{
+    display: flex;
+    padding: 0 .12rem;    
+    align-items: center;
+}
+.lui-input-tag .before{
+    background: linear-gradient(to right, var(--input-border-color), #dfdfdf);
+}
+.lui-input-tag .after{
+    background: linear-gradient(to left, var(--input-border-color), #dfdfdf);
+}
+.lui-input-tag>input{
+    flex: 1;
+    border: none;
+    height: 100%;
+}
+
+/* select */
+
+/* check radio  */
+a.checkbox, a.radio{
+    display: inline-block;
+    position: relative;
+    color: var(--input-border-color);
+    vertical-align: middle;
+    padding-left: .22rem;
+    font-size: .16rem;
+    line-height: 1.5;
+    height: .24rem;
+}
+a.checkbox:before,a.radio:before{
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: .18rem;
+    height: .18rem;    
+    border: solid 1px;
+    border-radius: .02rem;
+    top: .02rem;
+    left: .02rem;
+}
+a.checkbox:after{
+    content: "";       
+    position: absolute;   
+    width: 0;
+    height: 0;
+    transition: height .2s, width .15s .1s; 
+}
+a.checkbox:hover, a.checkbox.checked, a.checkbox.in, a.radio.checked{
+    color: var(--input-active-color);
+}
+a.checkbox.checked:after{
+    transform-origin: center center;
+    left: .07rem;
+    top: .07rem;
+    width: .08rem;
+    height: .04rem;
+    border-bottom: solid .015rem;
+    border-left: solid .015rem;
+    transform: rotate(-45deg);    
+}
+a.checkbox.checkin:after{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: .06rem;
+    height: .06rem;
+    background: var(--input-active-color);   
+}
+a.checkbox>span, a.radio>span{
+    color: var(--input-color);
+    margin-left: .06rem;
+}
+
+a.radio:before{
+    border-radius: .1rem;
+}
+a.radio:after{
+    content: "";       
+    position: absolute;   
+    width: 0;
+    height: 0;
+    background: var(--input-active-color);
+    left: .11rem;
+    top: .11rem;
+    transform: translate(-50%,-50%);
+    transition: all .2s; 
+    border-radius: .04rem;
+}
+a.radio.checked:after{     
+    width: .08rem;
+    height: .08rem;
+    transition: all .2s; 
+}
+
+.checkbox-group .checkbox, .radio-group .radio{
+    margin-right: .4rem;
+}
+
+
+/* file input */
+.file-input-transparent{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: none;
+    background: transparent;
+    opacity: 0;    
+    cursor: pointer;
+}
+
+
+/* lui-table */
+.lui-table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: .16rem;
+}
+.lui-table.border{
+    border-left: var(--table-border);
+    border-top: var(--table-border);
+}
+.lui-table.border .td, .lui-table.border .th {
+    border-right: var(--table-border);
+    border-bottom: var(--table-border);
+}
+.lui-table .tr{
+    width: 100%;
+    display: flex;
+    line-height: 3;
+}
+.lui-table .thead .tr{
+    background: var(--table-head-bg);
+}
+.lui-table .tbody .tr:hover{
+    background: var(--table-tr-hover-bg);
+}
+.lui-table .td, .lui-table .th{
+    padding:0 .14rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+.flex-none .td, .flex-none .th{
+    flex: unset;
+}
+/* table-tr 更新动画 */
+.table-tr-enter{
+    opacity: 0;    
+    transform: translateY(-50px);
+}
+.table-tr-enter-active{
+    transition: opacity 1.5s, transform 1s;
+}
+.table-tr-move{
+    transition: opacity 0.5s, transform 1.5s;
+}
+
+/* box-shadow */
+.shadow{
+	position: relative;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3),
+				0px 0px 20px rgba(0,0,0,0.1) inset;
+}
+.shadow::before,
+.shadow::after {
+   content:"";
+   position:absolute;
+   z-index:-1;
+   bottom:15px;
+   left:10px;
+   width:50%;
+   height:20%;
+   box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   transform:rotate(-3deg);
+}
+.shadow::after{
+   right:10px;
+   left:auto;
+   transform:rotate(3deg);
+ }
+
+ /* 操作提升 */
+.hit{
+    position: absolute;    
+    font-size: .16rem;
+    line-height: 2;
+    /* line-height: 42px; */
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%,-10vh);
+    background: var(--select-bg);
+    border: var(--input-border);
+    color: var(--input-color);
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 4px;
+    z-index: 99;
+    padding: 2px 20px;
+}
+.hit.show{
+   opacity: 1;
+}
+
+ /* popup */
+ /* z-index  
+    layer: 1000  
+    popup: 900  
+    popup.show-active: 1100   
+    alert: 1200
+    layer:after: 1000/800/1119
+*/
+ .lui-popup, .lui-alert{
+    position: absolute;
+    background: var(--popup-bg);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 3px;
+    color: var(--popup-color);    
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); 
+}
+.lui-popup{
+    z-index: 900;
+}
+.lui-popup.show-active{
+    z-index: 1100;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.1); 
+}
+.cover1:after{
+    z-index: 1000;
+}
+.cover0, .cover2:after{
+    z-index: 800;
+}
+.layer-alert:after{
+    z-index: 1199;
+}
+.lui-alert{
+    z-index: 1200;
+}
+.lui-popup-body>._scroll>._con{
+    min-height: 20vh;
+    max-height: 68vh;
+    height: unset;
+}
+.lui-popup-body ._scroll>._bar._v{
+    right: 2px;
+}
+
+/* layer进入离开动画 */
+.layer-enter{
+    transform:scale(0.75);
+    opacity: 0.1;
+}
+.layer-enter-active{
+    transition:  all .3s ease-in-out;    
+}
+.layer-leave-active{
+    opacity: 0;
+    top: 50%;
+    transition:  all .3s ease-in-out; 
+}
+/* popup进入动画 */
+.popuping-enter{
+    top: 40%;
+    transform: translate(-50%,-50%) scale(.2);
+    opacity: 0.1;
+}
+.popuping-enter-active{
+    transition:  all .6s ease-in-out;    
+}
+.popuping-leave-active{
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(.5);
+    top: 60%;
+    transition:  all .5s ease-in-out; 
+}
+
+
+/* form-row */
+.form-panel{
+    padding: .3rem .3rem .1rem .2rem;
+}
+.form-row{
+    width: 100%;
+    display: flex;
+    line-height: 2.5;
+    padding-bottom: .2rem;
+}
+.form-row .key{
+    width: 1.6rem;
+    text-align: end;
+    padding-right: .16rem;
+}
+.form-row .key:after{
+    content: ":";
+    margin-left: .05rem;
+}
+.form-row .val{
+    flex: 1;
+    padding-right: .5rem;
+    display: flex;
+    align-items: center;
+}
+.form-row[button]{
+    padding: .06rem 0;
+}
+.form-row[button] .val{
+    padding: 0;
+    justify-content: center;
+}
+.form-row[button] .btn{
+    margin: 0 .1rem;
+}
+
+/* l-r-check */
+.l-r-check ._con{
+    max-height: 60vh;
+    min-height: 36vh;
+}
+
+/* vue 过度动态 fade */
+.fade-enter{    
+    transform: translateY(20px);
+    opacity: 0.1;
+}
+.fade-enter-active{
+    transition:  all .7s;
+}
+.fade-leave-active{
+    opacity: 0.05;
+    transform: translateY(20px);
+    transition:  all .6s;
+}

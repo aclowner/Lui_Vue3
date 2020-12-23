@@ -1,0 +1,35 @@
+/* 设置root变量 */
+
+:root{
+    --font-family: "微软雅黑","Arial","Microsoft YaHei";
+    --size: .16rem;   
+    --color: #485778;
+    --active-color:#4fc08d;
+    --disable-color: #ccc;
+    --blue: #3981e3;
+    --green: #88c132;
+    --cyan: #4fc08d;
+    --yellow: #f4d338;
+    --orange: #ff6d4b;
+
+    --input-bg: transparent;
+    --input-height: .4rem;
+    --input-border-color: #ced3da;
+    --input-border:solid 1px var(--input-border-color);
+    --input-active-color: #3981e3;
+    --input-color:#485778;
+    --input-bg-readonly: #f6f6f6;
+
+    --scroll-bar: #dfdfdf;
+    --scroll-bar-hover: #cfcfcf;
+    --scroll-bar-press: #c0c0c0;
+
+    --select-bg:#fff; 
+    --popup-bg: #fff;
+    --popup-color: #5e6c84;
+
+    --table-head-bg:#f0f0f0;
+    --table-border: solid 1px #eaeaea;
+    --table-tr-hover-bg: #f9f9f9;
+}
+
