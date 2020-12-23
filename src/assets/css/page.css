@@ -1,0 +1,144 @@
+body{
+    color: #304455;
+    background: #fff;
+}
+.all{
+    height: 100%;
+    width: 100%;
+}
+.top{
+    height: 7.4vh;   
+    align-items: center;
+    border-bottom: solid 2px #eee;
+}
+.body{
+    flex: 1;
+    overflow: hidden;
+}
+.left{
+    width: 15vw;
+    border-right: solid 2px #eee;
+}
+.right{
+    flex: 1;
+}
+
+/* top */
+.logo{
+    width: 15vw;
+    height: 100%;
+    align-items: center;
+    padding-left: 2vw;
+}
+
+.img-logo{
+    height: 50%;    
+}
+.span-logo{
+    color: var(--active-color);
+    font-size: .24rem;
+    margin-left: 1.5vw;
+    letter-spacing: 1px;
+}
+
+/* left */
+.ul-menu{
+    padding: .15rem 0 .3rem;
+}
+.a-menu{
+    display: block;
+    padding-left: .36rem;
+}
+.a-menu.at1{
+    font-size: .18rem;
+    font-weight: 700;
+    padding-top: .15rem;
+    padding-bottom: .06rem;
+    line-height: 2;
+    color: #273849;
+}
+.a-menu.at2{
+    padding-top: .06rem;
+    padding-bottom: .06rem;
+    margin-left: .12rem;
+    color: #304455;
+}
+.a-menu.at2.active{
+    color: #42b983;
+    font-weight: 600;
+}
+
+
+/* page */
+.page{
+    width: 860px;
+    margin: 0 auto;
+    padding-bottom: .3rem;
+}
+.page h3{
+    line-height: .6rem;
+    padding-top: .1rem;
+    margin: .2rem 0;
+}
+.page h3>a:before{
+    content: "#";
+    color: #42b983;
+    margin-right: 6px;
+}
+.content h3+ul{
+    margin-left: .4rem;
+}
+.content li{
+    list-style: disc;
+    margin-bottom: .2rem;
+}
+.content li p, .content li .p{    
+    padding-top: .2rem;
+    display: flex;
+}
+code, pre, .html-code {
+    font-family: "Roboto Mono", Monaco, courier, monospace;
+    font-size: 0.16rem;
+    background-color: #f8f8f8;
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
+}
+code{
+    padding: 3px 5px;
+    margin: 0 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+pre code {
+    overflow-x: auto;
+    color: #525252;
+    white-space: pre;
+    padding: .1rem .2rem;
+    line-height: .3rem;
+    display: block;
+}
+.html-code{
+    width: 100%;
+    color: #525252;
+    padding: .1rem .2rem;
+    line-height: 2;
+}
+span.remark{
+    display: block;
+    margin-top: .2rem;
+    padding: .05rem .3rem;
+    line-height: 1.6;
+    background-color: #eee;
+}
+span.remark:before{
+    content: "注：";
+    color: tomato;
+}
+
+.div-table-fun{
+    padding: 20px 0;
+}
+.table-fun .td-0{
+    flex: unset;
+    width: 300px;
+}
